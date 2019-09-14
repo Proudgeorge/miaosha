@@ -18,6 +18,7 @@ public class PreProcessor {
     public static boolean checkReminds() {
         if (reminds) {
             // 远程检测是否还有剩余，该RPC接口应由数据库服务器提供，不必完全严格检查.
+
             if (!RPC.checkReminds()) {
                 reminds = false;
             }
